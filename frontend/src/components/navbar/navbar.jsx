@@ -1,9 +1,9 @@
 import React from "react";
 import "./navbar.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/shopping-bag.jpg";
 import cart_icon from "../assets/cart_icon.png";
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
 
@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="nav-logo">
         <img src={logo} />
-        <p>Shop</p>
+        <p>Stock-Z</p>
       </div>
       <ul className="nav-menu">
         <li
@@ -19,32 +19,40 @@ const Navbar = () => {
             setMenu("shop");
           }}
         >
-          <Link to="/">Shop</Link>
+          <Link style={{ textDecoration: "none" }} to="/">
+            Shop
+          </Link>
           {menu === "shop" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
-            setMenu("men");
+            setMenu("nike");
           }}
         >
-          <Link to="/mens">Men</Link>
-          {menu === "men" ? <hr /> : <></>}
+          <Link style={{ textDecoration: "none" }} to="/nike">
+            Nike
+          </Link>
+          {menu === "nike" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
-            setMenu("women");
+            setMenu("adidas");
           }}
         >
-          <Link to="/womens">Women</Link>
-          {menu === "women" ? <hr /> : <></>}
+          <Link style={{ textDecoration: "none" }} to="/adidas">
+            Adidas
+          </Link>
+          {menu === "adidas" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
-            setMenu("kids");
+            setMenu("newbalance");
           }}
         >
-          <Link to="/kids">Kids</Link>
-          {menu === "kids" ? <hr /> : <></>}
+          <Link style={{ textDecoration: "none" }} to="/newbalance">
+            New Balance
+          </Link>
+          {menu === "newbalance" ? <hr /> : <></>}
         </li>
       </ul>
       <div className="nav-login-cart">

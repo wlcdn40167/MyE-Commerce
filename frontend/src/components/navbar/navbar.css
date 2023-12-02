@@ -29,6 +29,7 @@
   align-items: center;
   justify-content: center;
   gap: 3px;
+  color: #171717;
   cursor: pointer;
 }
 .nav-menu hr {
